@@ -94,3 +94,11 @@
     background-color: darkslategray;
     opacity: 0.6;
 }
+
+
+
+@media screen and (max-width: 980px) {
+    .wrapper {
+        width: 95%;
+    }
+}
