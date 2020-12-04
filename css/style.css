@@ -1,11 +1,20 @@
-/* font: Monaco */
+/* font: Monaco 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Noto+Sans+TC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
 *,
 *:before,
 *:after {
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    /*font-family: 'Raleway', sans-serif;
+    font-family: 'JetBrains Mono', monospace;*/
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 a,
@@ -51,6 +60,7 @@ body {
     position: absolute;
     top: -700px;
     left: 0;
+    z-index: 1;
 
 }
 
@@ -132,6 +142,45 @@ body {
     background: url(../images/useful_hover.png);
 }
 
+#titleContainer {
+    width: 660px;
+    padding-right: 20px;
+    padding-top: 380px;
+    min-height: 110px;
+    margin: auto;
+    clear: both;
+}
+
+
+#pageBG {
+    background-color: #d2d2d2;
+    opacity: 0.95;
+    width: 660px;
+    height: 190px;
+    padding-top: 8px;
+    clear: both;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#pageBGwhite {
+    background-color: #fff;
+    width: auto;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#pageTitle {
+    font-size: 4.3rem;
+    color: #333399;
+    font-weight: 500;
+    vertical-align: bottom;
+    border: thick dotted #d2c985;
+    font-family: 'Fugaz One', cursive;
+    padding: 10px;
+}
 
 #main {
     background: url(../images/contentBG6.png) repeat-y center top;
@@ -340,6 +389,17 @@ ol {
     ol {
         font-size: 18px;
     }
+
+    #titleContainer,
+    #pageBG {
+        width: calc(660px * (1200/1350));
+        min-height: calc(190px * (1200/1350));
+    }
+
+    #pageTitle {
+        font-size: 4.3rem;
+    }
+
 }
 
 @media screen and (max-width: 980px) {
@@ -388,6 +448,16 @@ ol {
 
     .box {
         width: 95%;
+    }
+
+    #titleContainer,
+    #pageBG {
+        width: calc(660px * (980/1350));
+        height: calc(190px * (980/1350));
+    }
+
+    #pageTitle {
+        font-size: 3.3rem;
     }
 }
 
