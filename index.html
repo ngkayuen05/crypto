@@ -11,14 +11,35 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.6.min.js"></script>
     <script type="text/javascript" src="js/jquery.tools.js"></script>
     <script type="text/javascript" src="js/jquery.custom1.js"></script>
-    <script type="text/javascript" src="js/jquery.reveal.js"></script>
-
+    
     <!-- tiles -->
     <link rel="stylesheet" href="css/tiles.css">
+
+    <!-- welcome poster -->
+    <link rel="stylesheet" href="css/reveal.css">
+    <script type="text/javascript" src="js/jquery.reveal.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#myModal').reveal({
+                animation: 'fade', //設定值選擇：fade, fadeAndPop, none  
+                animationspeed: 100, //特效顯示速度, 300即是0.3 秒 
+                closeOnBackgroundClick: true, //if you click background will modal close?  
+                dismissModalClass: 'close-reveal-modal' //the class of a button or element that will close an open modal  
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div id="wrap">
+        <!-- welcome poster-->
+        <div id="myModal" class="reveal-modal">
+            <img src="images/welcome.gif" height="521" width="691">
+            <a class="close-reveal-modal">&#215;</a>
+            <br>
+            <hr>
+        </div>
+        
         <div id="container">
             <div id="header">
                 <!--圖-->
@@ -47,7 +68,7 @@
                                     <div class="prev_img_bor">
                                         <img src="images/poster2.png" id="poster" alt="" />
                                     </div>
-                                    
+
                                     <p>This is a website about Crytpography. You may try different encryption and decryption method here.<br>
                                         <a href="#" class="buttons" id="alink"><span>Read more</span></a>
                                     </p>
@@ -158,5 +179,5 @@
 
     <button onclick="topFunction()" id="topButton" title="Go to top">Top</button>
     <script type="text/javascript" src="js/topButton.js"></script>
-    
+
 </body></html>
